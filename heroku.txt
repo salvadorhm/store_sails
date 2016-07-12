@@ -1,0 +1,44 @@
+Crate heroku proyect
+
+
+heroku login
+heroku apps:create proyect
+heroku create proyect
+heroku git:remote -a proyect
+
+Activate heroky key
+
+heroku config:set APPROVED_API_KEY=APIKEY
+
+Activate logs
+
+heroku addons:add papertrail
+
+Add MongoDB
+
+heroku addons:add mongolab:starter
+
+Create git proyect
+
+git init
+
+Clone heroku proyect 
+
+heroku git:clone -a sailsdemo
+
+Deploy proyect
+
+git add .
+git commit -am "comentario"
+git push heroku master
+
+
+
+Config Sails.js proyect
+
+Create Procfile -> web: npm start
+
+Modify -> package.json -> 
+"scripts":{
+	"start": "sails lift"	
+}
